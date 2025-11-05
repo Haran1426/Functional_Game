@@ -5,6 +5,6 @@ public class GameStart : MonoBehaviour
 {
     public void ClickStart()
     {
-        SceneManager.LoadScene(""); //씬 이름 집어넣기
+        SceneManager.LoadScene("MainScene"); //씬 이름 집어넣기
     }
 }

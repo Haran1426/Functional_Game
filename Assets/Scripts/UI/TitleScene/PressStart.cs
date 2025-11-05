@@ -11,9 +11,6 @@ public class PressStart : MonoBehaviour
     public Texture pressTexture;
     public Texture normalTexture;
 
-    public RectTransform manual;
-    private Vector2 startPosition = new Vector2(0, 0);
-    private Vector2 closePosition = new Vector2(0, -1500);
 
     public void SelectButton(int val)
     {
@@ -28,10 +25,5 @@ public class PressStart : MonoBehaviour
     public void NormalButton(int val)
     {
         images[val].texture = normalTexture;
-    }
-
-    public void ClickStart()
-    {
-        manual.DOAnchorPos(startPosition, 1.0f).SetEase(Ease.OutQuint);
     }
 }
