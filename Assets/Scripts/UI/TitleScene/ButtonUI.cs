@@ -1,30 +1,56 @@
-﻿using UnityEngine;
+﻿using DG.Tweening;
+using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ButtonUI : MonoBehaviour
 {
-    public RawImage[] images;
-    public Color selectedColor;
-    public Color PressColor;
-    public Color normalColor;
+    public RectTransform setting; //세팅창 띄우기 닫기
+    private Vector2 startSettingPosition = new Vector2(780, -150);
+    private Vector2 closeSettingPosition = new Vector2(2580, -100);
+
+    public RectTransform manual; //메뉴얼 띄우기 닫기
+    private Vector2 startManualPosition = new Vector2(0, 0);
+    private Vector2 closeManualPosition = new Vector2(0, -1500);
 
     private void Start()
     {
 
     }
 
-    public void SelectButton(int val)
+    //게임시작
+    public void ClickStart()
     {
-        images[val].color = selectedColor;
+        SceneManager.LoadScene("MainScene"); //씬 이름 집어넣기
     }
 
-    public void PressButton(int val)
+    //게임나가기
+    public void ClickExit()
     {
-        images[val].color = PressColor;
+        Application.Quit();
     }
 
-    public void NormalButton(int val)
+    //세팅창 보이기
+    public void ShowSetting()
     {
-        images[val].color = normalColor;
+        setting.DOAnchorPos(startSettingPosition, 1.0f).SetEase(Ease.OutQuint);
+    }
+
+    //세팅창 닫기
+    public void CloseSetting()
+    {
+        setting.DOAnchorPos(closeSettingPosition, 1.0f).SetEase(Ease.OutQuint);
+    }
+
+    //메뉴얼 보이기
+    public void ShowManual()
+    {
+        manual.DOAnchorPos(startManualPosition, 1.0f).SetEase(Ease.OutQuint);
+    }
+
+    //메뉴얼 닫기
+    public void CloseManual()
+    {
+        manual.DOAnchorPos(closeManualPosition, 1.0f).SetEase(Ease.OutQuint);
     }
 }
