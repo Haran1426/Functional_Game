@@ -21,7 +21,7 @@ public class ButtonUI : MonoBehaviour
     //게임시작
     public void ClickStart()
     {
-        SceneManager.LoadScene("MainScene"); //씬 이름 집어넣기
+        SceneManager.LoadScene("Choice"); //씬 이름 집어넣기
     }
 
     //게임나가기
