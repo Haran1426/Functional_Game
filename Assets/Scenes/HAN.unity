@@ -366,9 +366,9 @@ MonoBehaviour:
   prefab_1: {fileID: 5947327011811914915, guid: c95183e04aebe3b448ddf05890f6bfa4, type: 3}
   prefab_2: {fileID: 4385240103901754484, guid: e75b0a85dc7a300428964b8f191cfb30, type: 3}
   prefab_3: {fileID: 3775395770892921022, guid: ccf892d5e5ccf424dbef7fdbfe731e3b, type: 3}
-  maxItemcount: 50
-  min: {x: -8, y: -4}
-  max: {x: 8, y: 4}
+  maxItemcount: 500
+  min: {x: -7, y: -5}
+  max: {x: 10, y: 4}
 --- !u!4 &974752614
 Transform:
   m_ObjectHideFlags: 0
@@ -378,7 +378,7 @@ Transform:
   m_GameObject: {fileID: 974752612}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.39308, y: 1.06486, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -425,7 +425,7 @@ Camera:
   m_GameObject: {fileID: 1262783400}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.754717, g: 0.6963086, b: 0.48771805, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -476,7 +476,7 @@ Transform:
   m_GameObject: {fileID: 1262783400}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.41, y: -0.34, z: 0}
+  m_LocalPosition: {x: 1.41, y: -0.34, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

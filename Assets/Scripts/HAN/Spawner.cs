@@ -30,34 +30,7 @@ public class Spwaner : MonoBehaviour
             );
             count++;
 
-            yield return new WaitForSeconds(0.05f);
-        }
-        count = 0;
-
-        while (count < maxItemcount)
-        {
-            Instantiate(
-                prefab_2,
-                new Vector2(Random.Range(min.x, max.x), Random.Range(min.y, max.y)),
-                Quaternion.identity
-            );
-            count++;
-
             yield return new WaitForSeconds(0.01f);
         }
-        count = 0;
-
-        while (count < maxItemcount)
-        {
-            Instantiate(
-                prefab_3,
-                new Vector2(Random.Range(min.x, max.x), Random.Range(min.y, max.y)),
-                Quaternion.identity
-            );
-            count++;
-
-            yield return new WaitForSeconds(0.01f);
-        }
-        count = 0;
     }
 }
