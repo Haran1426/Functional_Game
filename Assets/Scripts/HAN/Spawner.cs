@@ -5,12 +5,10 @@ using UnityEngine.Rendering;
 
 public class Spwaner : MonoBehaviour
 {
-    [SerializeField] private GameObject prefab_1;
-    [SerializeField] private GameObject prefab_2;
-    [SerializeField] private GameObject prefab_3;
+    [SerializeField] private GameObject[] prefab;
 
     [SerializeField]
-    [Range(0, 1000)]
+    [Range(0, 500)]
     private int maxItemcount = 100;
     [SerializeField]
     private Vector2 min = new Vector2(-8f, -4f);
@@ -23,12 +21,14 @@ public class Spwaner : MonoBehaviour
 
         while (count < maxItemcount)
         {
+            int index = Random.Range(0, prefab.Length);
             Instantiate(
-                prefab_1,
+                prefab[index],
                 new Vector2(Random.Range(min.x, max.x), Random.Range(min.y, max.y)),
                 Quaternion.identity
             );
             count++;
+            Debug.Log(index + "가 생성되었습니다");
 
             yield return new WaitForSeconds(0.01f);
         }
