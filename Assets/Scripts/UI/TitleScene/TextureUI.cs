@@ -18,7 +18,7 @@ public class TextureUI : MonoBehaviour
     public Texture normalSettingTexture;
 
     public Texture selectedCloseTexture; //뒤로가기버튼 이미지 변경
-    public Texture pressCloseTexture;
+    public Texture pressCloseTexture;   
     public Texture normalCloseTexture;
 
     //시작버튼

@@ -75,5 +75,4 @@ public class Spwaner : MonoBehaviour
         }
         return 0;
     }
-
 }
