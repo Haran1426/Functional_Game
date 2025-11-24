@@ -595,13 +595,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a829ac85be34d0442b78776f5396edcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab:
-  - {fileID: 5947327011811914915, guid: c95183e04aebe3b448ddf05890f6bfa4, type: 3}
-  - {fileID: 4385240103901754484, guid: e75b0a85dc7a300428964b8f191cfb30, type: 3}
-  - {fileID: 3775395770892921022, guid: ccf892d5e5ccf424dbef7fdbfe731e3b, type: 3}
-  maxItemcount: 100
-  min: {x: -8, y: -5}
-  max: {x: 9, y: 4}
 --- !u!4 &974752614
 Transform:
   m_ObjectHideFlags: 0
@@ -1125,8 +1118,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 481.85, y: -51.811}
-  m_SizeDelta: {x: 301.6379, y: 103.6224}
+  m_AnchoredPosition: {x: 505.88, y: -47.332}
+  m_SizeDelta: {x: 253.5946, y: 87.118}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1955384063
 MonoBehaviour:
