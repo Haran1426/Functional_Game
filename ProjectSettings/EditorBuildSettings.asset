@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/HAN.unity
     guid: 761235aeaa3a7924c83fd000b460f0e9
   - enabled: 1
-    path: Assets/Scenes/JEONG.unity
+    path: Assets/Scenes/jeong.unity
     guid: f27d446f03197f04d9d98d847a903b7e
   - enabled: 1
     path: Assets/Scenes/SIM.unity

@@ -8,9 +8,9 @@ public class TrashHit : MonoBehaviour
         
     }
 
-    public void OnCollisionEnter2D()
+    public void OnTriggerEnter()
     {
-        Input.
+        
     }
     void Update()
     {
