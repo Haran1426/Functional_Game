@@ -16,6 +16,8 @@ public class TrashManager_SIM : MonoBehaviour
         if (TrashSpawner_SIM.Instance.GetFirstTrash() == trash)
         {
             TrashSpawner_SIM.Instance.RemoveFirst();
+
+            TimeManager_SIM.Instance.AddTime();
         }
         else
         {
