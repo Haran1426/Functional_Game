@@ -18,7 +18,7 @@ public class Trash
     public float Chance => chance;
 
 }
-public class Spwaner : MonoBehaviour
+public class Spawner : MonoBehaviour
 {
     [SerializeField] private Trash[] trashs;
 
