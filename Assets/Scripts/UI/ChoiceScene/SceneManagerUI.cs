@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class ChoiceUI : MonoBehaviour
+public class SceneManagerUI : MonoBehaviour
 {
     public void OnClickHAN()
     {
@@ -19,5 +19,13 @@ public class ChoiceUI : MonoBehaviour
     public void OnClickSIM()
     {
         SceneManager.LoadScene("SIM");
+    }
+    public void OnClickTitle()
+    {
+        SceneManager.LoadScene("TitleScene");
+    }
+    public void OnClickChoice()
+    {
+        SceneManager.LoadScene("Choice");
     }
 }

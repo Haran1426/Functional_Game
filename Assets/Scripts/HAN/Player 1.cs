@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class Player1 : MonoBehaviour
 {
+    private int HP;
+    private int maxHP = 100;
+
     public float moveSpeed = 5f;
 
     private Rigidbody2D rb;
@@ -9,6 +12,7 @@ public class Player1 : MonoBehaviour
 
     void Start()
     {
+        HP = maxHP;
         rb = GetComponent<Rigidbody2D>();
     }
 
