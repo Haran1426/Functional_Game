@@ -29,11 +29,17 @@ public class TimeManager_SIM : MonoBehaviour
         if (totalTime < 0)
             totalTime = 0;
 
-        // Slider 대신 이미지의 Fill로 표시
+        // 타임바 업데이트
         if (timerBar != null)
         {
-            float fill = totalTime / maxTime;  // 0~1 비율
+            float fill = totalTime / maxTime;
             timerBar.fillAmount = fill;
+        }
+
+        // 시간이 다 됐는지 확인 GameManager에 알림
+        if (totalTime <= 0 && !GameManager_SIM.Instance.isGameOver)
+        {
+            GameManager_SIM.Instance.GameOver();
         }
     }
 
@@ -43,5 +49,11 @@ public class TimeManager_SIM : MonoBehaviour
 
         if (totalTime > maxTime)
             totalTime = maxTime;
+    }
+
+    public void DecreaseTime(float amount)
+    {
+        totalTime -= amount;
+        if (totalTime < 0f) totalTime = 0f;
     }
 }

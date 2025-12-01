@@ -4,6 +4,9 @@ public class InputTrash_SIM : MonoBehaviour
 {
     void Update()
     {
+        if (GameManager_SIM.Instance != null && GameManager_SIM.Instance.isGameOver)
+            return;
+
         if (Input.GetKeyDown(KeyCode.A))
             ProcessByKey(TrashType.Food);
 

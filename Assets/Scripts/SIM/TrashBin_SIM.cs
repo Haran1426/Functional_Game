@@ -14,6 +14,7 @@ public class TrashBin_SIM : MonoBehaviour
         else
         {
             Debug.Log("Wrong Bin!");
+            TimeManager_SIM.Instance.DecreaseTime(2f);
         }
     }
 }

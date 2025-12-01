@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bf35dec53be6f23489dfab3444ec65c5
+guid: 748fddd0c8091ef4eb56af536d272a61
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2022216304979402232
-    second: minigame_rail (1)_0
+      213: 4974722826680119857
+    second: trash_can_1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: minigame_rail (1)_0
+      name: trash_can_1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 695
-        height: 647
+        width: 285
+        height: 314
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8fddc45e30b501c10800000000000000
-      internalID: 2022216304979402232
+      spriteID: 132bb4cbd04c90540800000000000000
+      internalID: 4974722826680119857
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      minigame_rail (1)_0: 2022216304979402232
+      trash_can_1_0: 4974722826680119857
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
