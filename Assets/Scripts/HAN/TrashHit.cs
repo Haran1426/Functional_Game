@@ -2,21 +2,19 @@
 
 public class TrashHit : MonoBehaviour
 {
+    public int point;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
 
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D Collider)
     {
-        if (other.CompareTag("Trash"))
+        if (Collider.CompareTag("Player"))
         {
-            if (player != null)
-            {
-                player.Damage(damage);
-            }
-            Destroy(other.gameObject);
+            HANUIManager.instance.AddScore(point);
+            TrashPool.instance.ReturnTrash(gameObject);
         }
     }
 
