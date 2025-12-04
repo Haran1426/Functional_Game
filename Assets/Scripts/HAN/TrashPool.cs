@@ -28,7 +28,7 @@ public class TrashPool : MonoBehaviour
     {
         for (int i = 0; i < poolSize; i++)
         {
-            var prefap = trashPrefabs[Random.Range(0, trashPrefabs.Length)];
+            var prefab = trashPrefabs[Random.Range(0, trashPrefabs.Length)];
 
             var obj = Instantiate(prefab, transform);
             obj.SetActive(false);
