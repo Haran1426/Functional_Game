@@ -15,13 +15,8 @@ public class TrashSpawner_SIM : MonoBehaviour
         Instance = this;
     }
 
-    private void Start()
-    {
-        InitTrash();
-    }
-
     // 처음 4개 생성
-    void InitTrash()
+    public void InitTrash()
     {
         trashList.Clear();
 
