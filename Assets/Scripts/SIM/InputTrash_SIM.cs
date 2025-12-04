@@ -4,7 +4,9 @@ public class InputTrash_SIM : MonoBehaviour
 {
     void Update()
     {
-        if (GameManager_SIM.Instance != null && GameManager_SIM.Instance.isGameOver)
+        if (!GameManager_SIM.Instance.isGameStart)
+            return;
+        if (GameManager_SIM.Instance.isGameOver)
             return;
 
         if (Input.GetKeyDown(KeyCode.A))
@@ -13,15 +15,19 @@ public class InputTrash_SIM : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.S))
             ProcessByKey(TrashType.Plastic);
 
-        if (Input.GetKeyDown(KeyCode.Semicolon))
+        if (Input.GetKeyDown(KeyCode.K))
             ProcessByKey(TrashType.Can);
 
-        if (Input.GetKeyDown(KeyCode.Quote))
+        if (Input.GetKeyDown(KeyCode.L))
             ProcessByKey(TrashType.Paper);
     }
 
     void ProcessByKey(TrashType inputType)
     {
+        //쓰래기가 생성되지 않았을떄에 키입력 방지용
+        if (TrashSpawner_SIM.Instance.GetFirstTrash() == null)
+            return;
+
         // 현재 첫 번째 쓰레기 가져오기
         Trash_SIM firstTrash = TrashSpawner_SIM.Instance.GetFirstTrash();
         if (firstTrash == null) return;
