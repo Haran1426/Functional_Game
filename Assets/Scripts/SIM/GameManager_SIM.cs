@@ -10,6 +10,11 @@ public class GameManager_SIM : MonoBehaviour
     public bool isGameStart = false;
     public int score = 0;
 
+    public GameObject three_SIM;
+    public GameObject two_SIM;
+    public GameObject one_SIM;
+    public GameObject start_SIM;
+
     public TextMeshProUGUI scoreText;
 
     void Start()
@@ -32,16 +37,26 @@ public class GameManager_SIM : MonoBehaviour
 
     IEnumerator GameStart()
     {
+        three_SIM.SetActive(true);
         Debug.Log("3");
         yield return new WaitForSeconds(1f);
+        three_SIM.SetActive(false);
 
+        two_SIM.SetActive(true);
         Debug.Log("2");
         yield return new WaitForSeconds(1f);
+        two_SIM.SetActive(false);
 
+        one_SIM.SetActive(true);
         Debug.Log("1");
         yield return new WaitForSeconds(1f);
+        one_SIM.SetActive(false);
 
+        start_SIM.SetActive(true);
         Debug.Log("START!");
+        yield return new WaitForSeconds(1f);
+        start_SIM.SetActive(false);
+
 
         isGameStart = true;
 
