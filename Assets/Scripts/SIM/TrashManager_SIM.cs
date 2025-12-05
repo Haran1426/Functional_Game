@@ -18,6 +18,8 @@ public class TrashManager_SIM : MonoBehaviour
             TrashSpawner_SIM.Instance.RemoveFirst();
 
             TimeManager_SIM.Instance.AddTime();
+
+            GameManager_SIM.Instance.AddScore();
         }
         else
         {

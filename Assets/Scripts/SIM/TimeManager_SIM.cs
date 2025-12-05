@@ -20,6 +20,9 @@ public class TimeManager_SIM : MonoBehaviour
 
     void Update()
     {
+        if (!GameManager_SIM.Instance.isGameStart)
+            return;
+
         // 감소 속도 점점 빨라짐
         timeSpeed += speedIncreaseRate * Time.deltaTime;
 

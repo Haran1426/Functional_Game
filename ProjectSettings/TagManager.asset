@@ -42,5 +42,20 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BackGround
+    uniqueID: 2984153699
+    locked: 0
+  - name: TrashRail
+    uniqueID: 1033067657
+    locked: 0
+  - name: TrashBin
+    uniqueID: 4153132399
+    locked: 0
+  - name: Trash
+    uniqueID: 1232095267
+    locked: 0
+  - name: UI
+    uniqueID: 1163176241
+    locked: 0
   m_RenderingLayers:
   - Default
