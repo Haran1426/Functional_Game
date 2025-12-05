@@ -6,7 +6,7 @@ public class UIAnim : MonoBehaviour
 {
     public List<CanvasGroup> items;
     public float fadeTime = 0.3f;
-    public float delay = 0.1f;
+    public float startDelay = 0.1f;
 
     void Start()
     {
@@ -18,10 +18,10 @@ public class UIAnim : MonoBehaviour
 
     IEnumerator Play()
     {
-        foreach (var cg in items)
+        for (int i = 0; i < items.Count; i++)
         {
-            yield return StartCoroutine(FadeIn(cg));
-            yield return new WaitForSeconds(delay);
+            StartCoroutine(FadeIn(items[i]));
+            yield return new WaitForSeconds(startDelay);
         }
     }
 
