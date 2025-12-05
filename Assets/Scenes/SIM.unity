@@ -346,6 +346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 469800098}
   - component: {fileID: 469800099}
+  - component: {fileID: 469800100}
   m_Layer: 0
   m_Name: three_SIM
   m_TagString: Untagged
@@ -423,6 +424,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &469800100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469800097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38a0be8173618114cad5e6e5984b1dc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startScale: 0.4
+  endScale: 0.5
+  duration: 0.09
 --- !u!1 &586605667
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,6 +611,7 @@ GameObject:
   m_Component:
   - component: {fileID: 635850955}
   - component: {fileID: 635850956}
+  - component: {fileID: 635850957}
   m_Layer: 0
   m_Name: start_SIM
   m_TagString: Untagged
@@ -672,6 +689,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &635850957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635850954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38a0be8173618114cad5e6e5984b1dc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startScale: 0.8
+  endScale: 1
+  duration: 0.09
 --- !u!1 &636944792
 GameObject:
   m_ObjectHideFlags: 0
@@ -1434,6 +1466,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1204000164}
   - component: {fileID: 1204000165}
+  - component: {fileID: 1204000166}
   m_Layer: 0
   m_Name: one_SIM
   m_TagString: Untagged
@@ -1511,6 +1544,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1204000166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204000163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38a0be8173618114cad5e6e5984b1dc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startScale: 0.4
+  endScale: 0.5
+  duration: 0.09
 --- !u!1 &1251846142
 GameObject:
   m_ObjectHideFlags: 0
@@ -1737,8 +1785,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3aeb9a803b5e914c8a0bcb8f595f97f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalTime: 30
-  maxTime: 30
+  totalTime: 20
+  maxTime: 20
   addTime: 2
   timeSpeed: 1
   speedIncreaseRate: 0.05
@@ -2293,6 +2341,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2136506678}
   - component: {fileID: 2136506679}
+  - component: {fileID: 2136506680}
   m_Layer: 0
   m_Name: two_SIM
   m_TagString: Untagged
@@ -2370,6 +2419,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2136506680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136506677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38a0be8173618114cad5e6e5984b1dc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startScale: 0.4
+  endScale: 0.5
+  duration: 0.09
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

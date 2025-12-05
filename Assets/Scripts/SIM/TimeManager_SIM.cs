@@ -5,8 +5,8 @@ public class TimeManager_SIM : MonoBehaviour
 {
     public static TimeManager_SIM Instance;
 
-    public float totalTime = 30f;      // 현재 시간
-    public float maxTime = 30f;        // 최대 시간
+    public float totalTime = 20f;      // 현재 시간
+    public float maxTime = 20f;        // 최대 시간
     public float addTime = 2f;         // 쓰레기 처리 시 회복
     public float timeSpeed = 1f;       // 시간 감소 속도
     public float speedIncreaseRate = 0.05f; // 시간 가속 증가량

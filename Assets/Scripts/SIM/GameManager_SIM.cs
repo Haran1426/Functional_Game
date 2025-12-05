@@ -54,7 +54,7 @@ public class GameManager_SIM : MonoBehaviour
 
         start_SIM.SetActive(true);
         Debug.Log("START!");
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         start_SIM.SetActive(false);
 
 
