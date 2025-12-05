@@ -69,6 +69,8 @@ public class GameManager_SIM : MonoBehaviour
         isGameStart = false;
         isGameOver = true;
 
+
+        GameOver_SIM.Instance.ShowGameOver();
         Debug.Log("GAME OVER!");
     }
 }
