@@ -16,6 +16,7 @@ public class SceneManagerUI : MonoBehaviour
     {
         SceneManager.LoadScene("NA");
     }
+    
     public void OnClickSIM()
     {
         SceneManager.LoadScene("SIM");
@@ -27,5 +28,9 @@ public class SceneManagerUI : MonoBehaviour
     public void OnClickChoice()
     {
         SceneManager.LoadScene("Choice");
+    }
+    public void OnClickSelectStage()
+    {
+        SceneManager.LoadScene("SelectStage");
     }
 }
