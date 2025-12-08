@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using DG.Tweening;
+using UnityEngine;
 using System.Collections;
 using TMPro;
 
@@ -14,6 +15,14 @@ public class GameManager_SIM : MonoBehaviour
     public GameObject two_SIM;
     public GameObject one_SIM;
     public GameObject start_SIM;
+
+    public Transform scoreUI;
+    private Vector2 firstPosition = new Vector2(-12, 2.5f);
+    private Vector2 showPosition = new Vector2(-5.92f, 2.5f);
+
+    public RectTransform scoreText_SIM;
+    private Vector2 firstTextPosition = new Vector2(-1100, 255);
+    private Vector2 showTextPosition = new Vector2(-615, 255);
 
     public TextMeshProUGUI scoreText;
 
@@ -57,6 +66,9 @@ public class GameManager_SIM : MonoBehaviour
         yield return new WaitForSeconds(1f);
         start_SIM.SetActive(false);
 
+        yield return new WaitForSeconds(1f);
+        scoreUI.DOMove(showPosition, 1.0f).SetEase(Ease.OutQuint);
+        scoreText_SIM.DOAnchorPos(showTextPosition, 1.0f).SetEase(Ease.OutQuint);
 
         isGameStart = true;
 
