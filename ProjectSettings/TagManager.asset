@@ -54,6 +54,9 @@ TagManager:
   - name: Trash
     uniqueID: 1232095267
     locked: 0
+  - name: Player
+    uniqueID: 2949202021
+    locked: 0
   - name: UI
     uniqueID: 1163176241
     locked: 0
