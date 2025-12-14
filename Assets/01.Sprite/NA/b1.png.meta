@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 52c3d82788f55bc4296164f34f9c9352
+guid: 755246f325b7e67428add33d27f1a5d1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7936733023254469477
-    second: trash_food_1_0
-  - first:
-      213: -4430005051076229399
-    second: trash_food_1_1
+      213: -8251610326034200038
+    second: b1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: trash_food_1_0
+      name: b1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 203
-        height: 204
+        width: 143
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 56bd13052a0f42e60800000000000000
-      internalID: 7936733023254469477
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: trash_food_1_1
-      rect:
-        serializedVersion: 2
-        x: 179
-        y: 48
-        width: 189
-        height: 164
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9e64a6190e57582c0800000000000000
-      internalID: -4430005051076229399
+      spriteID: a1a49cb90246c7d80800000000000000
+      internalID: -8251610326034200038
       vertices: []
       indices: 
       edges: []
@@ -160,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      trash_food_1_0: 7936733023254469477
-      trash_food_1_1: -4430005051076229399
+      b1_0: -8251610326034200038
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

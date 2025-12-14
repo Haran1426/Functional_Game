@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 52c3d82788f55bc4296164f34f9c9352
+guid: 3fadaef22194a704eadb9f5cdb5d3087
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7936733023254469477
-    second: trash_food_1_0
+      213: 7721929554593497099
+    second: c6_0
   - first:
-      213: -4430005051076229399
-    second: trash_food_1_1
+      213: 3114224272572646722
+    second: c6_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: trash_food_1_0
+      name: c6_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 203
-        height: 204
+        x: 53
+        y: 502
+        width: 398
+        height: 137
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 56bd13052a0f42e60800000000000000
-      internalID: 7936733023254469477
+      spriteID: b00c222740ec92b60800000000000000
+      internalID: 7721929554593497099
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: trash_food_1_1
+      name: c6_1
       rect:
         serializedVersion: 2
-        x: 179
-        y: 48
-        width: 189
-        height: 164
+        x: 130
+        y: 17
+        width: 263
+        height: 509
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9e64a6190e57582c0800000000000000
-      internalID: -4430005051076229399
+      spriteID: 245879dd972f73b20800000000000000
+      internalID: 3114224272572646722
       vertices: []
       indices: 
       edges: []
@@ -160,8 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      trash_food_1_0: 7936733023254469477
-      trash_food_1_1: -4430005051076229399
+      c6_0: 7721929554593497099
+      c6_1: 3114224272572646722
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
