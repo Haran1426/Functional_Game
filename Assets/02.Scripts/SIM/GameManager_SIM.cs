@@ -78,21 +78,25 @@ public class GameManager_SIM : MonoBehaviour
     {
         three_SIM.SetActive(true);
         Debug.Log("3");
+        BGM_Manager_SIM.Instance.Count321SFX();
         yield return new WaitForSeconds(1f);
         three_SIM.SetActive(false);
 
         two_SIM.SetActive(true);
         Debug.Log("2");
+        BGM_Manager_SIM.Instance.Count321SFX();
         yield return new WaitForSeconds(1f);
         two_SIM.SetActive(false);
 
         one_SIM.SetActive(true);
         Debug.Log("1");
+        BGM_Manager_SIM.Instance.Count321SFX();
         yield return new WaitForSeconds(1f);
         one_SIM.SetActive(false);
 
         start_SIM.SetActive(true);
         Debug.Log("START!");
+        BGM_Manager_SIM.Instance.PlayStartSFX();
         yield return new WaitForSeconds(1f);
         start_SIM.SetActive(false);
 
