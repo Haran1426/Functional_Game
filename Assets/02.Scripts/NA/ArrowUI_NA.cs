@@ -19,6 +19,9 @@ public class ArrowUI_NA : MonoBehaviour
 
     void Update()
     {
+        if (!GameManager_NA.Instance.isGameStart)
+            return;
+
         // A 키
         if (Input.GetKeyDown(KeyCode.A))
             leftArrow.texture = leftPressed;

@@ -1,10 +1,9 @@
-﻿using System.Collections;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
-public class GameOver_SIM : MonoBehaviour
+public class GameOver_NA : MonoBehaviour
 {
-    public static GameOver_SIM Instance;
+    public static GameOver_NA Instance;
 
     public GameObject gameOverUI;        // 게임오버 UI
     public TextMeshProUGUI scoreText;    // 점수를 표시할 텍스트
@@ -18,7 +17,7 @@ public class GameOver_SIM : MonoBehaviour
     public void ShowGameOver()
     {
         // 점수 표시
-        int finalScore = GameManager_SIM.Instance.score;
+        int finalScore = GameManager_NA.Instance.score;
         scoreText.text = " " + finalScore;
 
         // UI 활성화

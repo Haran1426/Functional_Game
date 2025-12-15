@@ -13,6 +13,9 @@ public class PlayerMove_NA : MonoBehaviour
 
     void Update()
     {
+        if (!GameManager_NA.Instance.isGameStart)
+            return;
+
         if (Input.GetKeyDown(KeyCode.A))
         {
             direction = -1;

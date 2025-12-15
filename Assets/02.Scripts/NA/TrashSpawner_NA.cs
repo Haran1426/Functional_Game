@@ -8,7 +8,7 @@ public class TrashSpawner_NA : MonoBehaviour
     public float spawnY = 4.8f;
 
     [Header("Wall Settings")]
-    public float wallPadding = 3.2f; // 벽 두께 + 여유 (중요)
+    public float wallPadding = 3.5f; // 벽 두께 + 여유 (중요)
 
     private float timer;
     private Camera cam;
@@ -20,6 +20,9 @@ public class TrashSpawner_NA : MonoBehaviour
 
     void Update()
     {
+        if (!GameManager_NA.Instance.isGameStart)
+            return;
+
         timer += Time.deltaTime;
 
         if (timer >= spawnInterval)
