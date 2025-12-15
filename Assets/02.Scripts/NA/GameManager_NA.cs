@@ -23,6 +23,10 @@ public class GameManager_NA : MonoBehaviour
     public int score = 0;
     public TextMeshProUGUI scoreText;
 
+    public AudioSource sfxSource;
+    public AudioClip getTrashSFX;
+    public AudioClip missTrashSFX;
+
     private void Start()
     {
         hpUI.UpdateHP(hp); // 시작 시 전체 표시
@@ -65,11 +69,14 @@ public class GameManager_NA : MonoBehaviour
     {
         score += 10;
         scoreText.text = score.ToString();
+        PlaySFX(getTrashSFX);
+
     }
 
     public void TakeDamage()
     {
         hp--;
+        PlaySFX(missTrashSFX);
 
         if (hp < 0)
             hp = 0;
@@ -78,6 +85,12 @@ public class GameManager_NA : MonoBehaviour
 
         if (hp <= 0)
             GameOver();
+    }
+
+    void PlaySFX(AudioClip clip)
+    {
+        if (clip != null)
+            sfxSource.PlayOneShot(clip);
     }
 
     void GameOver()
