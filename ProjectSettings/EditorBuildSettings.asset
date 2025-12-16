@@ -14,12 +14,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/03.Scenes/SelectStage.unity
     guid: d061de1e67b277544a10f33cb46f3324
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainScene.unity
     guid: 9282afeed64eb5443b585ab4fb2888cb
   - enabled: 1
     path: Assets/03.Scenes/Choice.unity
     guid: a711560d676886a458642427e796b421
+  - enabled: 1
+    path: Assets/03.Scenes/Flowerpot.unity
+    guid: 7df08bbbd2bb60d4daaf3def316febfe
   - enabled: 1
     path: Assets/03.Scenes/HAN.unity
     guid: 761235aeaa3a7924c83fd000b460f0e9

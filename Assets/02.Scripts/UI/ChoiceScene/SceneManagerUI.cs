@@ -33,4 +33,8 @@ public class SceneManagerUI : MonoBehaviour
     {
         SceneManager.LoadScene("SelectStage");
     }
+    public void OnClickFlowerpot()
+    {
+        SceneManager.LoadScene("Flowerpot");
+    }
 }
