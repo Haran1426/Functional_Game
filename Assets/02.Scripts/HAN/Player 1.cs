@@ -10,10 +10,13 @@ public class Player1 : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 moveInput;
 
+    private Animator animator;
+
     void Start()
     {
         HP = maxHP;
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -22,6 +25,11 @@ public class Player1 : MonoBehaviour
         float moveY = Input.GetAxisRaw("Vertical");
 
         moveInput = new Vector2(moveX, moveY).normalized;
+
+        float speed = moveInput.magnitude;
+
+        animator.SetFloat("Speed", speed);
+        animator.SetBool("IsMove", speed > 0.1f);
     }
 
     void FixedUpdate()
