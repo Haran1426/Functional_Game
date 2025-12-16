@@ -23,10 +23,6 @@ public class GameManager_NA : MonoBehaviour
     public int score = 0;
     public TextMeshProUGUI scoreText;
 
-    public AudioSource sfxSource;
-    public AudioClip getTrashSFX;
-    public AudioClip missTrashSFX;
-
     private void Start()
     {
         hpUI.UpdateHP(hp); // 시작 시 전체 표시
@@ -45,23 +41,28 @@ public class GameManager_NA : MonoBehaviour
     {
         three_NA.SetActive(true);
         Debug.Log("3");
+        BGM_Manager_NA.Instance.Count321SFX();
         yield return new WaitForSeconds(1f);
         three_NA.SetActive(false);
 
         two_NA.SetActive(true);
         Debug.Log("2");
+        BGM_Manager_NA.Instance.Count321SFX();
         yield return new WaitForSeconds(1f);
         two_NA.SetActive(false);
 
         one_NA.SetActive(true);
         Debug.Log("1");
+        BGM_Manager_NA.Instance.Count321SFX();
         yield return new WaitForSeconds(1f);
         one_NA.SetActive(false);
 
         start_NA.SetActive(true);
         Debug.Log("START!");
+        BGM_Manager_NA.Instance.PlayStartSFX();
         yield return new WaitForSeconds(1f);
         start_NA.SetActive(false);
+        BGM_Manager_NA.Instance.PlayBGM(BGM_Manager_NA.Instance.gameBGM);
         isGameStart = true;
     }
 
@@ -69,28 +70,22 @@ public class GameManager_NA : MonoBehaviour
     {
         score += 10;
         scoreText.text = score.ToString();
-        PlaySFX(getTrashSFX);
+        BGM_Manager_NA.Instance.PlayCorrectSFX();
 
     }
 
     public void TakeDamage()
     {
         hp--;
-        PlaySFX(missTrashSFX);
 
         if (hp < 0)
             hp = 0;
+        BGM_Manager_NA.Instance.PlayWrongSFX();
 
         hpUI.UpdateHP(hp);
 
         if (hp <= 0)
             GameOver();
-    }
-
-    void PlaySFX(AudioClip clip)
-    {
-        if (clip != null)
-            sfxSource.PlayOneShot(clip);
     }
 
     void GameOver()
