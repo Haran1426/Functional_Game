@@ -2200,9 +2200,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 26bd6d6fb7bb28641b8c39d2b3cdef25, type: 3}
-  m_Resource: {fileID: 8300000, guid: 26bd6d6fb7bb28641b8c39d2b3cdef25, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
   m_Volume: 0.05
   m_Pitch: 1
   Loop: 1
@@ -2757,10 +2757,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sfxSource: {fileID: 1612133073}
+  bgmSource: {fileID: 1251846146}
+  gameBGM: {fileID: 8300000, guid: 26bd6d6fb7bb28641b8c39d2b3cdef25, type: 3}
   countSFX: {fileID: 8300000, guid: ca219d8e04128f04dbd08c36bd62cc0e, type: 3}
   startSFX: {fileID: 8300000, guid: a595b5dfb7cd4294cb25d9c5ee424e3e, type: 3}
   correctSFX: {fileID: 8300000, guid: 2207a440d5fab754a98cdfb6fdbb6e67, type: 3}
   wrongSFX: {fileID: 8300000, guid: ac8242d6b0f824c4aae0da28f49f033e, type: 3}
+  comboSFX: {fileID: 8300000, guid: 299c86d7b997a2740b87b7e59b320730, type: 3}
 --- !u!1 &1646137197
 GameObject:
   m_ObjectHideFlags: 0

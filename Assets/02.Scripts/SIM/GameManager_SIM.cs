@@ -52,6 +52,7 @@ public class GameManager_SIM : MonoBehaviour
         if (correctCount == 10)
         {
             StartCoroutine(ShowComboUI());
+            BGM_Manager_SIM.Instance.PlayComboSFX();
 
             score += 50;
             scoreText.text = score.ToString();
@@ -99,6 +100,7 @@ public class GameManager_SIM : MonoBehaviour
         BGM_Manager_SIM.Instance.PlayStartSFX();
         yield return new WaitForSeconds(1f);
         start_SIM.SetActive(false);
+        BGM_Manager_SIM.Instance.PlayBGM(BGM_Manager_SIM.Instance.gameBGM);
 
         isGameStart = true;
 
