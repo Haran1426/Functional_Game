@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameOver_SIM : MonoBehaviour
 {
@@ -9,8 +8,6 @@ public class GameOver_SIM : MonoBehaviour
 
     public GameObject gameOverUI;        // 게임오버 UI
     public TextMeshProUGUI scoreText;    // 점수를 표시할 텍스트
-    public float delayBeforeLoad = 3f;   // 씬 이동 전 딜레이
-    public string nextSceneName = "SelectStage";
 
     void Awake()
     {
@@ -26,14 +23,5 @@ public class GameOver_SIM : MonoBehaviour
 
         // UI 활성화
         gameOverUI.SetActive(true);
-
-        // 씬 이동
-        StartCoroutine(LoadSceneAfterDelay());
-    }
-
-    IEnumerator LoadSceneAfterDelay()
-    {
-        yield return new WaitForSeconds(delayBeforeLoad);
-        SceneManager.LoadScene(nextSceneName);
     }
 }

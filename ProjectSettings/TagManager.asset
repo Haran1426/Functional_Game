@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Trash
+  - Ground
   - Wall
   layers:
   - Default
@@ -13,7 +14,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Wall
+  - 
   - 
   - 
   - 
@@ -46,6 +47,12 @@ TagManager:
   - name: BackGround
     uniqueID: 2984153699
     locked: 0
+  - name: Floor
+    uniqueID: 1343390597
+    locked: 0
+  - name: WIndow
+    uniqueID: 215690493
+    locked: 0
   - name: TrashRail
     uniqueID: 1033067657
     locked: 0
@@ -57,6 +64,12 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2949202021
+    locked: 0
+  - name: HP
+    uniqueID: 810457231
+    locked: 0
+  - name: HpBar
+    uniqueID: 2218572613
     locked: 0
   - name: UI
     uniqueID: 1163176241
