@@ -21,7 +21,7 @@ public class UIAnim : MonoBehaviour
         for (int i = 0; i < items.Count; i++)
         {
             StartCoroutine(FadeIn(items[i]));
-            yield return new WaitForSeconds(startDelay);
+            yield return new WaitForSecondsRealtime(startDelay);
         }
     }
 
@@ -32,7 +32,7 @@ public class UIAnim : MonoBehaviour
 
         while (t < fadeTime)
         {
-            t += Time.deltaTime;
+            t += Time.unscaledDeltaTime;
             cg.alpha = t / fadeTime;
             yield return null;
         }

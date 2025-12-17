@@ -1680,8 +1680,8 @@ MonoBehaviour:
   items:
   - {fileID: 90087054}
   - {fileID: 281884521}
-  - {fileID: 844488158}
   - {fileID: 284358080}
+  - {fileID: 844488158}
   fadeTime: 0.1
   startDelay: 0.1
 --- !u!4 &943870816
@@ -3020,7 +3020,7 @@ MonoBehaviour:
   m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 32
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 0
