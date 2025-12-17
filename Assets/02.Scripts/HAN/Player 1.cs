@@ -2,34 +2,34 @@ using UnityEngine;
 
 public class Player1 : MonoBehaviour
 {
-    private int HP;
-    private int maxHP = 100;
-
     public float moveSpeed = 5f;
 
-    private Rigidbody2D rb;
-    private Vector2 moveInput;
+    Rigidbody2D rb;
+    Animator animator;
 
-    private Animator animator;
+    Vector2 moveInput;
 
     void Start()
     {
-        HP = maxHP;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
 
     void Update()
     {
-        float moveX = Input.GetAxisRaw("Horizontal");
-        float moveY = Input.GetAxisRaw("Vertical");
+        float x = Input.GetAxisRaw("Horizontal");
+        float y = Input.GetAxisRaw("Vertical");
 
-        moveInput = new Vector2(moveX, moveY).normalized;
+        if (Mathf.Abs(x) > Mathf.Abs(y))
+            y = 0;
+        else
+            x = 0;
 
-        float speed = moveInput.magnitude;
+        moveInput = new Vector2(x, y).normalized;
 
-        animator.SetFloat("Speed", speed);
-        animator.SetBool("IsMove", speed > 0.1f);
+        animator.SetFloat("MoveX", moveInput.x);
+        animator.SetFloat("MoveY", moveInput.y);
+
     }
 
     void FixedUpdate()
