@@ -13,6 +13,8 @@ public class ButtonUI : MonoBehaviour
     private Vector2 startManualPosition = new Vector2(0, 0);
     private Vector2 closeManualPosition = new Vector2(0, -1500);
 
+    public TitleCutsceneController cutscene;
+
     private void Start()
     {
 
@@ -21,7 +23,13 @@ public class ButtonUI : MonoBehaviour
     //게임시작
     public void ClickStart()
     {
-        SceneManager.LoadScene("Choice"); //씬 이름 집어넣기
+        cutscene.onCutsceneEnd = LoadNextScene;
+        cutscene.PlayCutscene();
+    }
+
+    void LoadNextScene()
+    {
+        SceneManager.LoadScene("Choice");
     }
 
     //게임나가기
