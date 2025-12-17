@@ -730,8 +730,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ChoiceUI, Assembly-CSharp
+      - m_Target: {fileID: 1725779672}
+        m_TargetAssemblyTypeName: SceneManagerUI, Assembly-CSharp
         m_MethodName: OnClickHAN
         m_Mode: 1
         m_Arguments:
@@ -893,8 +893,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ChoiceUI, Assembly-CSharp
+      - m_Target: {fileID: 1725779672}
+        m_TargetAssemblyTypeName: SceneManagerUI, Assembly-CSharp
         m_MethodName: OnClickNA
         m_Mode: 1
         m_Arguments:
