@@ -30,6 +30,7 @@ public class Grid : MonoBehaviour
 
     public Cell[,] cells;
 
+    public bool showCells = true;
     void Awake()
     {
         BuildGrid();
@@ -93,4 +94,28 @@ public class Grid : MonoBehaviour
 
         list.Add(cells[x, y]);
     }
+    void OnDrawGizmos()
+    {
+        if (!showCells || cells == null)
+            return;
+
+        for (int x = 0; x < cells.GetLength(0); x++)
+        {
+            for (int y = 0; y < cells.GetLength(1); y++)
+            {
+                Cell cell = cells[x, y];
+                if (cell == null) continue;
+
+                Gizmos.color = cell.canMove
+                    ? new Color(0, 1, 0, 0.2f)
+                    : new Color(1, 0, 0, 0.4f);
+
+                Gizmos.DrawCube(
+                    cell.pos,
+                    Vector3.one * cellSize * 0.9f
+                );
+            }
+        }
+    }
+
 }

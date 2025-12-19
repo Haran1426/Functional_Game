@@ -562,7 +562,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 733556125413723788, guid: 385b352c401c48244a0cce865364897d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 385b352c401c48244a0cce865364897d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -652,8 +652,10 @@ MonoBehaviour:
   items:
   - {fileID: 1939714598}
   - {fileID: 1295405085}
-  fadeTime: 0.1
-  startDelay: 0.1
+  groupMoveOffset: 200
+  groupMoveTime: 0.4
+  itemFadeTime: 0.25
+  itemDelay: 0.05
 --- !u!1 &1878057218
 GameObject:
   m_ObjectHideFlags: 0
@@ -919,7 +921,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -994974952208540728, guid: 50f83049773fee64eb071e43d4cdfcd8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 50f83049773fee64eb071e43d4cdfcd8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
