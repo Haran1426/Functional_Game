@@ -1,5 +1,6 @@
-using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class Enemy : MonoBehaviour
@@ -50,12 +51,19 @@ public class Enemy : MonoBehaviour
         if (Vector2.Distance(rb.position, next) < 0.05f)
             index++;
     }
-
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            HANUIManager.instance.GameOver();
+            Camera.main.GetComponent<CameraShake>()?.Shake();
+            StartCoroutine(GameOverDelay());
         }
     }
+
+    IEnumerator GameOverDelay()
+    {
+        yield return new WaitForSecondsRealtime(0.2f);
+        HANUIManager.instance.GameOver();
+    }
+
 }

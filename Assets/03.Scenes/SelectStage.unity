@@ -1682,10 +1682,12 @@ MonoBehaviour:
   - {fileID: 281884521}
   - {fileID: 284358080}
   - {fileID: 844488158}
-  groupMoveOffset: 1000
-  groupMoveTime: 1.2
+  groupOffset: 349.3
+  moveTime: 0.3
+  overshoot: 15
   itemFadeTime: 0.1
-  itemDelay: 0
+  itemDelay: 0.05
+  itemShake: 10
 --- !u!224 &943870816
 RectTransform:
   m_ObjectHideFlags: 0
