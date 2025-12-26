@@ -13,16 +13,22 @@ public class TitleCutsceneController : MonoBehaviour
     public RawImage[] cuts;
 
     [Header("컷 연출")]
-    public float cutMoveY = 80f;          // 올라오는 거리
-    public float cutDuration = 0.8f;      // 컷 하나 나오는 시간 (느리게)
-    public float cutDelay = 0.3f;          // 컷 사이 대기 시간
+    public float cutMoveY = 80f;
+    public float cutDuration = 0.8f;
+    public float cutDelay = 0.3f;
 
     [Header("부모 이동")]
     public float rootMoveY = 380f;
-    public float rootMoveDuration = 1.5f; // 부모 이동 시간 (느리게)
+    public float rootMoveDuration = 1.5f;
+
+    [Header("스킵 UI")]
+    public GameObject skipUI;   // "Press Enter to Skip"
 
     private Vector2 rootStartPos;
     private Coroutine cutsceneRoutine;
+
+    private bool isPlaying = false;
+    private bool skipReady = false;   // 엔터 1번 눌렀는지
 
     public Action onCutsceneEnd;
 
@@ -30,6 +36,30 @@ public class TitleCutsceneController : MonoBehaviour
     {
         rootStartPos = cutsceneRoot.anchoredPosition;
         InitCuts();
+
+        if (skipUI != null)
+            skipUI.SetActive(false);
+    }
+
+    void Update()
+    {
+        if (!isPlaying) return;
+
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            // 첫 번째 엔터 → 스킵 UI 표시
+            if (!skipReady)
+            {
+                skipReady = true;
+                if (skipUI != null)
+                    skipUI.SetActive(true);
+            }
+            // 두 번째 엔터 → 컷씬 즉시 종료
+            else
+            {
+                SkipCutscene();
+            }
+        }
     }
 
     void InitCuts()
@@ -47,7 +77,21 @@ public class TitleCutsceneController : MonoBehaviour
         gameObject.SetActive(true);
 
         if (cutsceneRoutine != null)
+        {
             StopCoroutine(cutsceneRoutine);
+            cutsceneRoutine = null;
+        }
+
+        // 상태 초기화
+        isPlaying = true;
+        skipReady = false;
+        if (skipUI != null)
+            skipUI.SetActive(false);
+
+        // DOTween 정리
+        cutsceneRoot.DOKill(true);
+        foreach (var cut in cuts)
+            cut.DOKill(true);
 
         cutsceneRoot.anchoredPosition = rootStartPos;
         InitCuts();
@@ -64,24 +108,22 @@ public class TitleCutsceneController : MonoBehaviour
             yield return new WaitForSecondsRealtime(cutDelay);
         }
 
-        // 부모 이동 (아래 잘린 부분 보여주기)
+        // 부모 이동
         yield return cutsceneRoot
             .DOAnchorPosY(rootStartPos.y + rootMoveY, rootMoveDuration)
             .SetEase(Ease.OutCubic)
             .WaitForCompletion();
 
-        yield return new WaitForSecondsRealtime(0.5f); // 연출 여유
+        yield return new WaitForSecondsRealtime(0.5f);
 
-        // 6 ~ 끝 컷
+        // 6 ~ 끝
         for (int i = 5; i < cuts.Length; i++)
         {
             yield return ShowCut(cuts[i]);
             yield return new WaitForSecondsRealtime(cutDelay);
         }
 
-        // 컷씬 종료
-        yield return new WaitForSecondsRealtime(1.0f);
-        onCutsceneEnd?.Invoke();
+        EndCutscene();
     }
 
     IEnumerator ShowCut(RawImage cut)
@@ -99,5 +141,37 @@ public class TitleCutsceneController : MonoBehaviour
         seq.Join(cut.DOFade(1f, cutDuration));
 
         yield return seq.WaitForCompletion();
+    }
+
+    // 🔥 스킵 처리
+    void SkipCutscene()
+    {
+        if (!isPlaying) return;
+
+        // 코루틴 / 트윈 정리
+        if (cutsceneRoutine != null)
+        {
+            StopCoroutine(cutsceneRoutine);
+            cutsceneRoutine = null;
+        }
+
+        cutsceneRoot.DOKill(true);
+        foreach (var cut in cuts)
+            cut.DOKill(true);
+
+        EndCutscene();
+    }
+
+    void EndCutscene()
+    {
+        isPlaying = false;
+        skipReady = false;
+
+        if (skipUI != null)
+            skipUI.SetActive(false);
+
+        onCutsceneEnd?.Invoke();
+
+        gameObject.SetActive(false);
     }
 }

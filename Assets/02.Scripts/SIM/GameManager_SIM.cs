@@ -40,6 +40,7 @@ public class GameManager_SIM : MonoBehaviour
 
     void Awake()
     {
+        Time.timeScale = 1f;
         Instance = this;
     }
 
