@@ -31,6 +31,8 @@ public class GameManager_NA : MonoBehaviour
 
     private void Awake()
     {
+
+        Time.timeScale = 1f;
         if (Instance == null)
             Instance = this;
         else
