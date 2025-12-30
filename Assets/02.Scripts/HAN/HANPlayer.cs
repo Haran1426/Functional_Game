@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Player1 : MonoBehaviour
+public class HANPlayer : MonoBehaviour
 {
     public float moveSpeed = 5f;
 
