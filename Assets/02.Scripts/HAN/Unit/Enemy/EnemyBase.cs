@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class EnemyBase : MonoBehaviour
+public class EnemyBase : Unit
 {
     [Header("Refs")]
     public Transform target;

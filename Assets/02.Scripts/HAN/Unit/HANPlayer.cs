@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class HANPlayer : MonoBehaviour
+public class HANPlayer : Unit
 {
     public float moveSpeed = 5f;
 
@@ -9,13 +9,25 @@ public class HANPlayer : MonoBehaviour
 
     Vector2 moveInput;
 
-    void Start()
+    protected override void Awake()
     {
+        base.Awake();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
 
     void Update()
+    {
+        ReadInput();
+        UpdateAnimator();
+    }
+
+    void FixedUpdate()
+    {
+        rb.linearVelocity = moveInput * moveSpeed;
+    }
+
+    void ReadInput()
     {
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
@@ -26,14 +38,16 @@ public class HANPlayer : MonoBehaviour
             x = 0;
 
         moveInput = new Vector2(x, y).normalized;
-
-        animator.SetFloat("MoveX", moveInput.x);
-        animator.SetFloat("MoveY", moveInput.y);
-
     }
 
-    void FixedUpdate()
+    void UpdateAnimator()
     {
-        rb.linearVelocity = moveInput * moveSpeed;
+        animator.SetFloat("MoveX", moveInput.x);
+        animator.SetFloat("MoveY", moveInput.y);
+    }
+    protected override void Die()
+    {
+        base.Die();
+        gameObject.SetActive(false);
     }
 }
