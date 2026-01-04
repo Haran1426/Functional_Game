@@ -1,14 +1,17 @@
 using UnityEngine;
 
-public class EnemyMelee : MonoBehaviour
+public class EnemyMelee : EnemyBase
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [Header("Range")]
+    public float detectRange = 5f;
+    public float attackRange = 1.2f;
+
+    EnemyMove movement;
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
